@@ -10,7 +10,7 @@ always@ (posedge clk)
   begin
     if(rst == 1)
        begin
-         
+        
           c_state = 0;
           n_state = 0;
           change = 2'b00;
