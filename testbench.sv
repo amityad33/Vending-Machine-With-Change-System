@@ -7,7 +7,7 @@ reg rst;
 //output
 wire out;
 wire[1:0] change;
-vending_machine_18105070 uut(
+vending_machine uut(
 .clk(clk),
 .rst(rst),
 .in(in),
