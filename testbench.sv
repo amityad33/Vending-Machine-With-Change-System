@@ -22,7 +22,7 @@ vending_machine uut(
    end
 initial begin
 //initialise inputs
-/*$dumpfile("vending_machine_18105070.vcd");
+/*$dumpfile("vending_machine.vcd");
 $dumpvars(0,vending_machine_tb);*/
 rst = 1;
 clk = 0;
