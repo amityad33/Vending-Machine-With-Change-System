@@ -1,5 +1,5 @@
 `timescale 1ns/1ps
-module vending_machine_18105070(
+module vending_machine(
 input clk, input rst, input [1:0]in, // 01 = 5 rs, 10 = 10 rs
 output reg out, output reg[1:0] change);
 parameter s0 = 2'b00;
