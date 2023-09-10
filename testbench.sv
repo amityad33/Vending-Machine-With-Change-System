@@ -3,13 +3,13 @@ module vending_machine_tb;
 //inputs
 reg clk;
 reg[1:0] in;
-reg rst;
+reg reset;
 //output
 wire out;
-wire[1:0] change;
+wire [1:0]change;
 vending_machine uut(
 .clk(clk),
-.rst(rst),
+.reset(reset),
 .in(in),
 .out(out),
 .change(change)
@@ -20,16 +20,14 @@ vending_machine uut(
      #1000
      $finish;
    end
+  
 initial begin
-//initialise inputs
-/*$dumpfile("vending_machine.vcd");
-$dumpvars(0,vending_machine_tb);*/
-rst = 1;
-clk = 0;
-#6 rst = 0;
-in = 2;
-#19 in = 2;
-#25 $finish;
+reset = 1;
+clk = 1;
+#6 reset = 0;
+in = 2'b10;
+#19 in = 2'b10;
+#80 $finish;
 end
 always #5 clk = ~clk;
 endmodule
